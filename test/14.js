@@ -8,6 +8,6 @@ describe('Diagnal array', () => {
     const array = [[1,2,3],[2,3,4],[3,4,5]];
     const expected = [1,3,5];
     const actual = solution(array);
-    expect(actual).eql(expected);
+    expect(solution(array)).eql(expected);
   });
 });
