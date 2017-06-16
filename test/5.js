@@ -1,6 +1,7 @@
 const expect = require('chai').expect;
 let solution = require('../solutions/5').solution;
 let solution2 = require('../solutions/5').solution2;
+let solution3 = require('../solutions/yourSolution').solution3;
 
 describe('sort arrays', () => {
   // solution tests
@@ -47,5 +48,12 @@ describe('sort arrays', () => {
     const actual = [57];
     const expected = [57];
     expect(solution2(actual)).eql(expected);
-  });
+    });
+  // for solution3
+  it.only('solution2 - array should have numbers in ascending order - single',
+    () => {
+      const actual = [1, 5, 31, 57, 2, 0];
+      const expected = [0, 1, 2, 5, 31, 57];
+      expect(solution3(actual)).eql(expected);
+    });
 });
