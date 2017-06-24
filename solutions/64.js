@@ -14,7 +14,7 @@ const reverseInput = (string) => {
      newString += string[i];
   };
   return newString;
-}
+};
 
 /**
 * @param {string} sentence - a sentence
@@ -38,6 +38,16 @@ const solution = (sentence) => {
 return result.join(' ');
 };
 
+const solution2 = (actual) => {
+  let splitArr = actual.split(' ');
+  for (let i=0; i<splitArr.length/2; i++) {
+      let temp = splitArr[i];
+      splitArr[i] = splitArr[splitArr.length-i-1];
+      splitArr[splitArr.length-i-1] = temp;
+          }
+    actual = splitArr.join(' ');
+    return actual;
+};
 module.exports = {
-  solution
+  solution, solution2,
 };
